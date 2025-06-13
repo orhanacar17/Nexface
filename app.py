@@ -386,9 +386,9 @@ def process_batch_videos(src_img, video_files, enhance, quality_mode, upscale_fa
         shutil.rmtree(session_temp, ignore_errors=True)
 
 # Gradio App
-with gr.Blocks(title="Face2Face Swapper Pro", theme=gr.themes.Soft()) as demo:
+with gr.Blocks(title="NexFace", theme=gr.themes.Soft()) as demo:
     gr.Markdown("""
-    # 🎭 Face2Face: Source to Target Face Swapper
+    # 👁️ NexFace: Source to Target Face Swapper
     ### Professional-grade face swapping with batch processing capabilities
     """)
     
