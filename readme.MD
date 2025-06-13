@@ -31,6 +31,8 @@ This application is built on top of the Face2Face library, which uses Insightfac
 3.  **Post-processing**: The swapped face region is enhanced using a combination of high-quality upscaling (Pillow's `LANCZOS` filter), sharpening, and a subtle contrast boost.
 4.  **Face Enhancement**: Optional face enhancement using models like GFPGAN or GPEN can be applied for superior quality results.
 
+![Image](https://github.com/user-attachments/assets/ba87ae3f-84ba-4ec0-8490-da22f9f1efdf)
+
 ## 📦 Requirements
 
 -   Python 3.7 or higher
