@@ -1,4 +1,4 @@
-# 🎭 Face2Face Enhanced
+# 👁️ NexFace
 
 A powerful, local, and user-friendly desktop application for high-quality batch face swapping. Built with Python and Gradio, this tool provides a convenient interface for the Face2Face library, allowing you to swap a single source face onto hundreds of target images or videos with just a few clicks.
 
@@ -43,8 +43,8 @@ This application is built on top of the Face2Face library, which uses Insightfac
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/face2face-swapper-pro.git
-    cd face2face-swapper-pro
+    git clone https://github.com/ExoFi-Labs/Nexface.git
+    cd nexface
     ```
 
 2.  **Create a virtual environment (recommended):**
