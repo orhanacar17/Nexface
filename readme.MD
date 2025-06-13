@@ -33,6 +33,12 @@ This application is built on top of the Face2Face library, which uses Insightfac
 
 ![Image](https://github.com/user-attachments/assets/ba87ae3f-84ba-4ec0-8490-da22f9f1efdf)
 
+
+
+![Image](https://github.com/user-attachments/assets/47958ccb-a43f-4b37-b69c-3e292539a258)
+
+![Image](https://github.com/user-attachments/assets/0600c053-f2bd-4187-b38c-a059b5a2c5e1)
+
 ## 📦 Requirements
 
 -   Python 3.7 or higher
